@@ -35,4 +35,6 @@ The checkBalance function returns the balance of a specified address.
 The showRedeemedItems function returns a string listing the redeemed items and their quantities for a specified address. It uses the toString function to convert the quantities from uint256 to string.
 The toString function is a private helper function that converts a uint256 value to a string.
 
+>Video Walkthrough
+
 https://www.loom.com/share/5b0a76121bd543c8a92bce58e95b26a7
