@@ -6,6 +6,7 @@ License This contract is using the MIT License.
 Prerequisites Solidity ^0.8.0
 
 >Challenge:
+
 The task is to create a ERC20 token and deploy it on the Avalanche network for Degen Gaming. The smart contract should have the following functionality:
 
 Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
