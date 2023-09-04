@@ -1,5 +1,5 @@
 # ETH-AVAX-INTERMEDIATE-4
-InGame Contract
+Degen Contract
 
 License This contract is using the MIT License.
 
@@ -16,25 +16,14 @@ Checking token balance: Players should be able to check their token balance at a
 Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
 
 >Explanation:
+The Solidity contract named GameAsset. This contract represents an in-game asset and contains several functionalities such as creating, transferring, and destroying assets, redeeming items, and checking the balance of an account.
+State variables: These are variables declared at the contract level. They include assetName, assetSymbol, assetOwner, hasItem1, hasItem2, hasItem3, hasItem4, redeemedItems, and balances. These variables are permanently stored in the Ethereum blockchain and represent the "state" of the contract.
+Constructor: This is a special function that is executed when the contract is deployed. It sets the initial state of the contract, including the name, symbol, and owner of the asset.
+Modifiers: The onlyOwner modifier is used to restrict access to certain functions to only the owner of the contract.
+Functions: The contract includes several functions that allow for creating, transferring, and destroying assets, redeeming items, and checking the balance of an account. These functions contain logic to ensure the appropriate conditions are met before executing, such as ensuring sufficient balance before transferring assets.
+Mapping: The contract uses several mappings to keep track of who owns which assets, who has redeemed which items, and the balance of each account.
 
-The code is a Solidity smart contract named "InGame".
-
-The contract defines several state variables:
-name and symbol are public strings representing the name and symbol of the in-game tokens.
-owner is the address of the contract owner.
-balances is a mapping that stores the balance of each address.
-The constructor function is executed once when the contract is deployed. It sets the initial values for name, symbol, and owner.
-The onlyOwner modifier is defined to restrict certain functions to be called only by the contract owner. It throws an error if the caller is not the owner.
-The mint function allows the contract owner to mint new tokens and assign them to a specified address. It requires the amount to be greater than zero.
-The transfer function allows a user to transfer tokens to another address. It requires the amount to be greater than zero and the sender to have sufficient balance.
-The burn function allows a user to burn (destroy) tokens from their own balance. It requires the amount to be greater than zero and the sender to have sufficient balance.
-The showRedeemableItems function returns a string listing the redeemable items and their prices.
-The redeemToken function allows a user to redeem a specific item by providing its index and quantity. It requires the quantity to be greater than zero. The function then calls the corresponding private redeem function based on the item index.
-The private redeem functions (redeemTShirt, redeemmediKit, redeemarGuns, redeemingameEmote) are responsible for handling the redemption of specific items. They check the user's balance and make sure the item has not been redeemed before. If the conditions are met, the item is marked as redeemed, the user's balance is reduced, and the redeemed item count is incremented.
-The checkBalance function returns the balance of a specified address.
-The showRedeemedItems function returns a string listing the redeemed items and their quantities for a specified address. It uses the toString function to convert the quantities from uint256 to string.
-The toString function is a private helper function that converts a uint256 value to a string.
 
 >Video Walkthrough
 
-https://www.loom.com/share/5b0a76121bd543c8a92bce58e95b26a7
+https://www.loom.com/share/0eba019277d94cb8a60d53c861343c45
